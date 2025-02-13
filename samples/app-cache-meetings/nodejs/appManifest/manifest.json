@@ -2,7 +2,7 @@
   "$schema": "https://developer.microsoft.com/json-schemas/teams/v1.19/MicrosoftTeams.schema.json",
   "version": "1.0.0",
   "manifestVersion": "1.19",
-  "id": "${{TEAMS_APP_ID}}",
+  "id": "d76ffb84-91fd-4640-af93-f5a691fe24b7",
   "name": {
     "short": "App Caching In Meeting",
     "full": "App Caching In Meeting"
@@ -24,21 +24,14 @@
   "accentColor": "#FFFFFF",
   "configurableTabs": [
     {
-      "configurationUrl": "${{TAB_ENDPOINT}}/configure",
+      "configurationUrl": "https://6ea7-24-4-243-227.ngrok-free.app/configure",
       "canUpdateConfiguration": true,
-      "scopes": [ "groupChat", "team" ],
-      "context": [
-        "channelTab",
-        "meetingChatTab",
-        "meetingDetailsTab",
-        "meetingSidePanel",
-        "meetingStage",
-        "privateChatTab"
-      ]
+      "scopes": ["team"],
+      "context": ["channelTab", "privateChatTab"]
     }
   ],
   "validDomains": [
-    "${{TAB_ENDPOINT}}" 
+    "https://6ea7-24-4-243-227.ngrok-free.app -" 
   ],
   "showLoadingIndicator": true
 }

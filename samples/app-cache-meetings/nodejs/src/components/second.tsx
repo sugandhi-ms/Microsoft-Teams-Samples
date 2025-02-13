@@ -6,13 +6,13 @@
 import React from "react";
 import "../components/index.css";
 
-const AppCacheTab = () => {
 
-    return (
-        <div style={{backgroundColor: 'blue', width: '100px', height: '100px'}}>
-            <h3>App Caching Sample</h3>
+const Second = () => {
+       return (
+        <div >
+            <h2 style={{color: 'red', marginTop: "120px" , backgroundColor: 'yellow'}}>Second Component</h2>
         </div>
     );
 };
 
-export default AppCacheTab;
+export default Second;
