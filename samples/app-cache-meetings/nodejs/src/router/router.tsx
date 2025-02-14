@@ -23,9 +23,7 @@ const AppContent = () => {
 
     React.useEffect(() => {
         app.initialize().then(app.getContext).then((context: any) => {
-            app.notifySuccess();
-
-            // Get default theme from app context and set app-theme
+             // Get default theme from app context and set app-theme
             let defaultTheme = context.app.theme;
 
             switch (defaultTheme) {
@@ -66,7 +64,6 @@ const AppContent = () => {
                     } else {
                         navigate('/second');
                     }
-                    app.notifySuccess();
                 });
         }).catch(function (error: any) {
             console.log(error, "Could not register handlers.");

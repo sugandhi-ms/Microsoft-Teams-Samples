@@ -5,9 +5,14 @@
 
 import React from "react";
 import "../components/index.css";
+import { app } from "@microsoft/teams-js";
 
 
 const Second = () => {
+    
+    React.useEffect(()=>{
+          app.notifySuccess();
+      }, []);
        return (
         <div >
             <h2 style={{color: 'red', marginTop: "120px" , backgroundColor: 'yellow'}}>Second Component</h2>
