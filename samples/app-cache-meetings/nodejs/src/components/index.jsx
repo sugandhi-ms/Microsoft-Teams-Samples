@@ -6,14 +6,13 @@
 import React from "react";
 import './index.css';
 
-// App cache in meeting default page index.tsx
 const Index = props => {
     return (
         <>
             <header class="header">
                 <div class="header-inner-container">
                     <div class="header-icon" ></div>
-                    <div class="header-text" >App Cache Sample In Meetings</div>
+                    <div class="header-text" >App Cache Sample In Channel tab</div>
                 </div>
             </header>
             <div class="row">

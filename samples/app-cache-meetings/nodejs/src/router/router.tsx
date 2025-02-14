@@ -62,9 +62,9 @@ const AppContent = () => {
                 microsoftTeams.teamsCore.registerOnLoadHandler((data: any) => {
                     console.log(data.contentUrl, data.entityId);
                     if (data.entityId === 'AppInstance_Component1') {
-                        navigate('/second');
-                    } else {
                         navigate('/appCacheTab');
+                    } else {
+                        navigate('/second');
                     }
                     app.notifySuccess();
                 });

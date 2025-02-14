@@ -8,7 +8,7 @@ import * as microsoftTeams from "@microsoft/teams-js";
 
 // Configure page.
 const Configure = props => {
-    const [selectedComponent, setSelectedComponent] = useState("Component 1");
+    const [selectedComponent, setSelectedComponent] = useState("Component1");
 
     useEffect(() => {
         microsoftTeams.app.initialize().then(() => {
@@ -42,8 +42,8 @@ const Configure = props => {
                 value={selectedComponent} 
                 onChange={(e) => setSelectedComponent(e.target.value)}
             >
-                <option value="Component1">Component 1</option>
-                <option value="Component2">Component 2</option>
+                <option value="Component1">Component1</option>
+                <option value="Component2">Component2</option>
             </select>
         </div>
     );
