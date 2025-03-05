@@ -7,11 +7,12 @@ import { useEffect, useState } from "react";
 import * as microsoftTeams from "@microsoft/teams-js";
 
 // Configure page.
-const Configure = props => {
+const Configure = () => {
     const [selectedComponent, setSelectedComponent] = useState("Component1");
 
     useEffect(() => {
         microsoftTeams.app.initialize().then(() => {
+            console.log("SugandhiLog, App initialized configure");
             microsoftTeams.app.notifySuccess();
 
             microsoftTeams.pages.config.registerOnSaveHandler(function (saveEvent) {
@@ -23,7 +24,7 @@ const Configure = props => {
                     //entityId : Generating a random id so that each tab instance has a unique ID.
                     entityId: "AppInstance_" + selectedComponent,
                     contentUrl,
-                    suggestedTabName: selectedComponent,
+                    //suggestedTabName: selectedComponent,
                     websiteUrl: contentUrl,
                 });
                 saveEvent.notifySuccess();

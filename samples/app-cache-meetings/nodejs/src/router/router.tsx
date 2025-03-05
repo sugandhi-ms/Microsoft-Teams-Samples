@@ -1,10 +1,4 @@
-// <copyright file="router.js" company="Microsoft Corporation">
-// Copyright (c) Microsoft Corporation.
-// Licensed under the MIT license.
-// </copyright>
-
-
-import React, { useState } from "react";
+import React from "react";
 import * as microsoftTeams from "@microsoft/teams-js";
 import {
     BrowserRouter,
@@ -73,7 +67,7 @@ const AppContent = () => {
             console.log("useEffect cleanup - Tab");
         };
 
-    }, []);
+    }, [app, navigate]);
 
     return null;
 };
@@ -91,4 +85,4 @@ export const AppRoute = () => {
             </BrowserRouter>
         </React.Fragment>
     );
-};
+}
