@@ -24,7 +24,7 @@
   "accentColor": "#FFFFFF",
   "configurableTabs": [
     {
-      "configurationUrl": "https://d87486f1b528.ngrok.app/configure",
+      "configurationUrl": "https://e72b-24-4-243-227.ngrok-free.app/configure",
       "canUpdateConfiguration": true,
       "scopes": [ "groupChat", "team" ],
       "context": [
@@ -38,7 +38,7 @@
     }
   ],
   "validDomains": [
-    "d87486f1b528.ngrok.app" 
+    "https://e72b-24-4-243-227.ngrok-free.app" 
   ],
   "showLoadingIndicator": true
 }

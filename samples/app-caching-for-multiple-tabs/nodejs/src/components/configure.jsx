@@ -14,11 +14,18 @@ const Configure = props => {
         const selectedValue = event.target.value;
         if (selectedValue) {
             setEntity(selectedValue);
+            let contentUrl ;
+            if( selectedValue === "red") {
+                contentUrl = `${window.location.origin}/appCacheTab?entityId=${selectedValue}`;
+            } else  {
+                contentUrl = `${window.location.origin}/yellow?entityId=${selectedValue}`;
+            }
+
             microsoftTeams.pages.config.setConfig({
                 entityId: selectedValue,
-                contentUrl: `${window.location.origin}/appCacheTab?entityId=${selectedValue}`,
+                contentUrl: contentUrl,
                 suggestedDisplayName: `${selectedValue}-Tab`,
-                websiteUrl: `${window.location.origin}/appCacheTab?entityId=${selectedValue}`,
+                websiteUrl: contentUrl,
             });
             microsoftTeams.pages.config.setValidityState(true);
         }
@@ -39,8 +46,6 @@ const Configure = props => {
             <select onChange={updateSelection} value={entity}>
                 <option value="">Select</option>
                 <option value="red">Red</option>
-                <option value="green">Green</option>
-                <option value="blue">Blue</option>
                 <option value="yellow">Yellow</option>
             </select>
             <p>Please click save button to proceed.</p>

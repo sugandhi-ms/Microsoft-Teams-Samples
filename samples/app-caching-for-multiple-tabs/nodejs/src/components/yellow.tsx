@@ -24,8 +24,8 @@ function appendLog(message: string, color: string, addNewLine: boolean = true): 
 const AppCacheTabInner = (props: {entityId: string, displayLogs: string[], appTheme: string}) => {
     const {entityId, displayLogs, appTheme} = props;
     return (
-        <div className={appTheme}>
-            <div className={`tab-entity-${entityId}`}  style={{marginTop: "100px", marginLeft: "20px"}}>
+        <div className={appTheme} >
+            <div className={`tab-entity-${entityId}`}>
                 <h3>{entityId}</h3>
                 {displayLogs.map((item) => {
                     return <div dangerouslySetInnerHTML={{ __html: item }} />;
@@ -35,9 +35,9 @@ const AppCacheTabInner = (props: {entityId: string, displayLogs: string[], appTh
     );
 };
 
-const AppCacheTab = () => {
+const Yellow = () => {
 
-    const entityId = 'red';
+    const entityId = 'yellow'
     const [displayLogs, setDisplayLogs] = useState<string[]>([]);
     const [appTheme, setAppTheme] = useState('theme-light');
 
@@ -78,7 +78,7 @@ const AppCacheTab = () => {
         }
 
         return () => {
-            console.log("useEffect cleanup - AppCacheTab");
+            console.log("useEffect cleanup - Second");
             if (entityId) {
                 setDisplayLogs((displayLogs) => [...displayLogs, appendLog(`Tab ${entityId} unmounted`, entityId, true)]);
             }
@@ -88,4 +88,4 @@ const AppCacheTab = () => {
     return appTheme && entityId ? <AppCacheTabInner entityId={entityId} displayLogs={displayLogs} appTheme={appTheme} /> : <div className="loading" />;
 };
 
-export default AppCacheTab;
+export default Yellow;
